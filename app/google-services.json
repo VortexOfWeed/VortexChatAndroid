@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "982744936932",
+    "firebase_url": "https://vortex-chat.firebaseio.com",
+    "project_id": "vortex-chat",
+    "storage_bucket": "vortex-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982744936932:android:6e6a5d003da2ee6f",
+        "android_client_info": {
+          "package_name": "org.vortex.vortexchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982744936932-642lv9qvqa8m2pbms2hccnv3dsl0sdb5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.vortex.vortexchat",
+            "certificate_hash": "9c77bf66f6764a1990e1ab69c0ebb90985227224"
+          }
+        },
+        {
+          "client_id": "982744936932-sbrcbdrnkvsr7pta7nj996r30ne3p5m9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnhvk6Y7hT7rhfnYAgxtQTbwYFGooozbQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982744936932-sbrcbdrnkvsr7pta7nj996r30ne3p5m9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
