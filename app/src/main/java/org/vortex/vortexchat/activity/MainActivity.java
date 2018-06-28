@@ -1,4 +1,4 @@
-package org.vortex.vortexchat;
+package org.vortex.vortexchat.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
 import com.google.firebase.auth.FirebaseAuth;
+
+import org.vortex.vortexchat.R;
 
 import java.util.Arrays;
 
@@ -23,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() != null) {
             // already signed in
-            startActivity(new Intent(this, SuccessActivity.class));
+            startActivity(new Intent(this, SuccessActivity.class)
+                    .putExtra("my_token", "empty")
+                    .putExtra("number", "empty"));
         } else {
             // not signed in
             AuthUI.IdpConfig phoneConfigWithDefaultNumber = new AuthUI.IdpConfig.PhoneBuilder()
@@ -50,7 +54,9 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == RC_SIGN_IN) {
             IdpResponse idpResponse = IdpResponse.fromResultIntent(data);
             startActivity(new Intent(this, SuccessActivity.class)
-                    .putExtra("my_token", idpResponse.getIdpToken()));
+                    .putExtra("my_token", idpResponse.getIdpToken())
+                    .putExtra("number", idpResponse.getPhoneNumber())
+            );
         }
     }
 }
